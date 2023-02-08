@@ -8,8 +8,7 @@ export function Card(props: (Brawler | RightHand | Squire | King)[]) {
   const initialState: (Brawler | RightHand | Squire | King)[] =
     Object.values(props);
 
-  const [chars, setChars] = useState(initialState);
-  setChars(chars);
+  const [chars] = useState(initialState);
 
   console.log(chars);
 
@@ -21,7 +20,7 @@ export function Card(props: (Brawler | RightHand | Squire | King)[]) {
             <div className="card character__card">
               <img
                 src={character.path}
-                alt="Nombre y familia del personaje"
+                alt={character.name + character.family}
                 className="character__picture card-img-top"
               />
               <div className="card-body">
