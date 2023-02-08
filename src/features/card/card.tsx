@@ -9,6 +9,7 @@ export function Card(props: (Brawler | RightHand | Squire | King)[]) {
     Object.values(props);
 
   const [chars, setChars] = useState(initialState);
+  setChars(chars);
 
   console.log(chars);
 
