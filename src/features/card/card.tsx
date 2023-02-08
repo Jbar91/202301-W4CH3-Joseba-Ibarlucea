@@ -8,8 +8,7 @@ export function Card(props: (Brawler | RightHand | Squire | King)[]) {
   const initialState: (Brawler | RightHand | Squire | King)[] =
     Object.values(props);
 
-  const [chars, setChars] = useState(initialState);
-  setChars(chars);
+  const [chars] = useState(initialState);
 
   console.log(chars);
 
